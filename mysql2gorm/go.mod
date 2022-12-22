@@ -1,4 +1,4 @@
-module github.com/eoe2005/goapp/sql2gorm
+module github.com/eoe2005/goapp/mysql2gorm
 
 go 1.18
 
