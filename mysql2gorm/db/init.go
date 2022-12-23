@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/eoe2005/goapp/sql2gorm/console"
+	"github.com/eoe2005/goapp/mysql2gorm/console"
 	_ "github.com/go-sql-driver/mysql"
 )
 

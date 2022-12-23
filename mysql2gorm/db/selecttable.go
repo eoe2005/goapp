@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/eoe2005/goapp/sql2gorm/console"
+	"github.com/eoe2005/goapp/mysql2gorm/console"
 )
 
 func selectTable(dbcon *sql.DB) {
