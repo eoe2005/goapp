@@ -9,7 +9,10 @@ import (
 )
 
 var cmdMap = map[string]cmds.CmdInterFace{
-	"test": &cmds.TestCmd{},
+	"test":  &cmds.TestCmd{},
+	"kafka": &cmds.KafkaCmd{},
+	"redis": &cmds.RedisCmd{},
+	"mysql": &cmds.MysqlCmd{},
 }
 
 func main() {
