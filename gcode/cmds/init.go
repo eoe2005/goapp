@@ -29,3 +29,10 @@ func readDef(msg, def string) string {
 	}
 	return data
 }
+func mustread(msg string) string {
+	ret := ""
+	for ret == "" {
+		ret = read(msg)
+	}
+	return ret
+}
