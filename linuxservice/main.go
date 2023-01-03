@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"goapps/utils"
 	"os"
 	"os/exec"
 	"path"
+
+	"github.com/eoe2005/goapp/linuxservice/utils"
 )
 
 type Service interface {
@@ -22,6 +23,7 @@ func main() {
 		fmt.Printf("参数错误 %s add|del exepath", os.Args[0])
 		os.Exit(-1)
 	}
+
 	act := os.Args[1]
 	exeFilePath := os.Args[2]
 	var s Service
