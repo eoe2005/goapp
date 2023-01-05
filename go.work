@@ -4,3 +4,4 @@ use ./mysql2gorm
 use ./gcode
 use ./serveragent
 use ./linuxservice
+use ./gencode
