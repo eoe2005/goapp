@@ -33,6 +33,14 @@ var cmds = map[string]code.Cmd{
 		Help:   "flate 解压，base64编码",
 		Handle: code.FlateDecodeBase64,
 	},
+	"tunix": {
+		Help:   "时间戳转字符串",
+		Handle: code.TimeUnixToString,
+	},
+	"tmunix": {
+		Help:   "毫秒时间戳转字符串",
+		Handle: code.TimeUnixMilliString,
+	},
 }
 
 func main() {
