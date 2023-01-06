@@ -9,13 +9,29 @@ import (
 )
 
 var cmds = map[string]code.Cmd{
-	"gzipencode": {
+	"gzip": {
 		Help:   "gzip 压缩，base64编码",
 		Handle: code.GzipEncodeBase64,
 	},
-	"gzipdecode": {
+	"gzipde": {
 		Help:   "gzip 解压，base64编码",
 		Handle: code.GzipDecodeBase64,
+	},
+	"zlib": {
+		Help:   "zlib 压缩，base64编码",
+		Handle: code.ZibEncodeBase64,
+	},
+	"zlibde": {
+		Help:   "zlib 解压，base64编码",
+		Handle: code.ZlibDecodeBase64,
+	},
+	"flate": {
+		Help:   "flate 压缩，base64编码",
+		Handle: code.FlateEncodeBase64,
+	},
+	"flatede": {
+		Help:   "flate 解压，base64编码",
+		Handle: code.FlateDecodeBase64,
 	},
 }
 
