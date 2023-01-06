@@ -5,7 +5,6 @@ import (
 	"compress/gzip"
 	"compress/zlib"
 	"encoding/base64"
-	"fmt"
 	"io/ioutil"
 
 	"github.com/klauspost/compress/flate"
@@ -13,12 +12,12 @@ import (
 
 func GzipEncodeBase64(src string) string {
 	var b bytes.Buffer
-	gw, _ := gzip.NewWriterLevel(&b, 7)
+	gw, _ := gzip.NewWriterLevel(&b, 9)
 	// gw := gzip.NewWriter(&b)
 	gw.Write([]byte(src))
-	gw.Flush()
+	// gw.Flush()
 	gw.Close()
-	fmt.Println(len(src), len(b.Bytes()), b.Bytes())
+	// fmt.Println(len(src), len(b.Bytes()), b.Bytes())
 	return base64.StdEncoding.EncodeToString(b.Bytes())
 }
 func GzipDecodeBase64(src string) string {
@@ -35,7 +34,7 @@ func ZibEncodeBase64(src string) string {
 	gw.Write([]byte(src))
 	gw.Flush()
 	gw.Close()
-	fmt.Println(len(src), len(b.Bytes()), b.Bytes())
+	// fmt.Println(len(src), len(b.Bytes()), b.Bytes())
 	return base64.StdEncoding.EncodeToString(b.Bytes())
 }
 func ZlibDecodeBase64(src string) string {
@@ -52,7 +51,7 @@ func FlateEncodeBase64(src string) string {
 	gw.Write([]byte(src))
 	gw.Flush()
 	gw.Close()
-	fmt.Println(len(src), len(b.Bytes()), b.Bytes())
+	// fmt.Println(len(src), len(b.Bytes()), b.Bytes())
 	return base64.StdEncoding.EncodeToString(b.Bytes())
 }
 func FlateDecodeBase64(src string) string {
