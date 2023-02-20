@@ -1,10 +1,10 @@
 package logic
 
 type GiteeParam struct {
-	LangType   string   `get:"lang_type"`
-	RunCmd     string   `get:"run_cmd"`
-	RunArgs    []string `get:"run_args"`
-	Branch     string   `get:"branch"`
+	LangType   string   `json:"lang_type"`
+	RunCmd     string   `json:"run_cmd"`
+	RunArgs    []string `json:"run_args"`
+	Branch     string   `json:"branch"`
 	Repository struct {
 		Name      string `json:"name"`
 		Path      string `json:"path"`
